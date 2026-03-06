@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- FONT AWESOME -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- Google Fonts -->
+		<!-- GOOGLE FONTS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
@@ -15,16 +15,19 @@
 			<h1 id="philippe-iannetta">Philippe Iannetta</h1>
 			<h1 id="administrateur-systemes-stockage">Administrateur Systèmes &amp; Réseaux</h1>
 		</header>
-		<!-- <img > -->
+		<!-- <div class="center"> -->
+		<!-- 	<img src="./kartunix.jpg" alt="my_profile_picture" width="50" height="50" style="border-radius:50%;"> -->
+		<!-- </div> -->
 		<p class="center italic" style="font-size:15px">« Datemi una leva &amp; vi solleverò il mondo — Archimede »</p>
 		<button class="pdf-button"><a class="no-decoration" href="./pdf/philippe-iannetta-cv-sysadmin.pdf">Télécharger en PDF</a></button>
-		<h2 class="à-propos center"><div style="margin-left:5px">Contacts</div></h2>
+		<h2 class="à-propos center" id="liens"><div style="margin-left:5px">Liens</div></h2>
+		<!-- <h2 class="à-propos center"><div style="margin-left:5px">Contacts</div></h2> -->
 		<div class="contacts-container">
 			<div class="contact-box"><a href="mailto:philippe.iannetta-contact@yahoo.fr" target="_blank" rel="noopener noreferrer" class="fa fa-envelope no-decoration" style="color: black;"></a></div>
 			<div class="contact-box"><a href="https://www.linkedin.com/in/philippe-iannetta-2418232b3/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin no-decoration" style="color: black;"></a></div>
 			<div class="contact-box"><a href="https://www.madlibrarianwriting.poetry.blog" target="_blank" rel="noopener noreferrer" class="fa fa-wordpress no-decoration" style="color: black;"></a></div>
 			<div class="contact-box"><a href="https://www.github.com/Soimuen11" target="_blank" rel="noopener noreferrer" class="fa fa-github no-decoration" style="color: black;"></a></div>
-			<div class="contact-box"><a href="https://portfolio.phiannetta.xyz" target="_blank" rel="noopener noreferrer" class="fa fa-address-book" style="color: black;"></a></div>
+			<!-- <div class="contact-box"><a href="https://portfolio.phiannetta.xyz" target="_blank" rel="noopener noreferrer" class="fa fa-address-book" style="color: black;"></a></div> -->
 		</div>
 		<h2 class="à-propos center"><div style="margin-left:5px">Expériences Professionnelles</div></h2>
 		<div class="container">
@@ -78,7 +81,7 @@
 				<li class="li-without-style"><em>CMS :</em> WordPress, Jekyll, Shopify, Wix.</li>
 				<li class="li-without-style"><em>Cloud :</em> Azure, Linode, Nextcloud, VMware vCloud.</li>
 				<li class="li-without-style"><em>Gestion de comptes :</em> AD, LDAP, Okta, Centrify, Nis.</li>
-				<li class="li-without-style"><em>Microsoft :</em> SharePoint, Teams, Outlook, Intune, OneNote.</li>
+				<li class="li-without-style"><em>Microsoft :</em> SharePoint, Excel, Teams, Outlook, Intune, OneNote.</li>
 				<li class="li-without-style"><em>Réseaux :</em> Cisco, Brocade, TPLink, Mikrotik, FortiGate.</li>
 				<li class="li-without-style"><em>Sauvegardes :</em> Timeshift, BackInTime, Veeam, PBS.</li>
 				<li class="li-without-style"><em>Ticketing :</em>ServiceNow, EasyVista, Heat, ITAM, EasyDesk, Jira, ITop.</li>
@@ -106,6 +109,7 @@
 				<li>Mise en place d'une solution de supervision.</li>
 				<li>Mise en place d'un serveur mail.</li>
 				<li>Mise en place d'une solution cloud.</li>
+				<li>Mise en place d'un reverse proxy.</li>
 				<li>Automatisation via un serveur Ansible.</li>
 			</ol>
 			<h4>Développement web &amp; programmation :</h4>
@@ -208,5 +212,13 @@
 				margin-left:10%;
 			}
 		}
+
+		/*Media Print*/
+		@media print {
+			html,body{height:auto;width:100%;border:none;overflow:visible!important;}
+			.pdf-button,.contacts-container,#liens{display:none;}
+			.container{margin-left:0;}
+		}
+
 	</style>
 </html>
