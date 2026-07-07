@@ -11,16 +11,20 @@
 		<link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<button id="pdf-button">Download CV as PDF</button>
 		<header class="my-header">
 			<h1 id="philippe-iannetta">Philippe Iannetta</h1>
 			<h1 id="administrateur-systemes-stockage">Administrateur Systèmes &amp; Réseaux</h1>
+		<p class="center italic" style="font-size:15px">« Datemi una leva &amp; vi solleverò il mondo — Archimede »</p>
 		</header>
 		<!-- <div class="center"> -->
 		<!-- 	<img src="./kartunix.jpg" alt="my_profile_picture" width="50" height="50" style="border-radius:50%;"> -->
 		<!-- </div> -->
-		<p class="center italic" style="font-size:15px">« Datemi una leva &amp; vi solleverò il mondo — Archimede »</p>
-		<button class="pdf-button"><a class="no-decoration" href="./pdf/philippe-iannetta-cv-sysadmin.pdf">Télécharger en PDF</a></button>
-		<h2 class="à-propos center" id="liens"><div style="margin-left:5px">Liens</div></h2>
+		<!-- <p class="center italic" style="font-size:15px">« Datemi una leva &amp; vi solleverò il mondo — Archimede »</p> -->
+		<!-- <button class="pdf-button"><a class="no-decoration" href="./pdf/philippe-iannetta-cv-sysadmin.pdf">Télécharger en PDF</a></button> -->
+
+
+		<!-- <h2 class="à-propos center" id="liens"><div style="margin-left:5px">Liens</div></h2> -->
 		<!-- <h2 class="à-propos center"><div style="margin-left:5px">Contacts</div></h2> -->
 		<div class="contacts-container">
 			<div class="contact-box"><a href="mailto:philippe.iannetta-contact@yahoo.fr" target="_blank" rel="noopener noreferrer" class="fa fa-envelope no-decoration" style="color: black;"></a></div>
@@ -120,7 +124,8 @@
 				<li>Développement d'un <a href="https://github.com/Soimuen11/PPM/">gestionnaire de mots de passe</a> : Perl.</li>
 				<!-- I could do the same password manager in HTML/CSS and JS by the way!! -->
 				<li>Modernisation d'un <a href="https://passioncheval.phiannetta.xyz">site web existant</a> (Espace Cheval) : HTML5, CSS3, Bootstrap 3.</li>
-				<li>Création d'un <a href="">jeu au tour par tour</a> : HTML5, CSS3, JavaScript.</li>
+				<!-- <li>Création d'un <a href="">jeu au tour par tour</a> : HTML5, CSS3, JavaScript.</li> -->
+				<li>Création d'un jeu au tour par tour : HTML5, CSS3, JavaScript.</li>
 			</ol>
 			<h4>Avec l'équipe UNIX-SAN à Econocom :</h4>
 			<ol class="add-left-border">
@@ -173,6 +178,8 @@
 		.li-without-style{list-style:none;}
 		.li-basic-info{display:inline; background-color:lightsteelblue; border-radius:15px; font-size:small; padding:4px;}
 		.pdf-button{display:block; margin:auto; background-color:lightsteelblue; border-radius:15px; font-size:small; padding:5px;}
+		#pdf-button{display:block; margin:auto; background-color:lightsteelblue; border-radius:15px; font-size:small; padding:5px; margin-top:5px;}
+		#pdf-button:hover{cursor:pointer;}
 		.center{text-align:center;}
 		.italic{font-style:italic;}
 		.red{background-color:crimson;}
@@ -218,9 +225,14 @@
 		/*Media Print*/
 		@media print {
 			html,body{height:auto;width:100%;border:none;overflow:visible!important;}
-			.pdf-button,.contacts-container,#liens{display:none;}
+			.pdf-button,.contacts-container,#liens,#pdf-button{display:none;}
 			.container{margin-left:0;}
 		}
-
 	</style>
+	<script>
+		document.getElementById('pdf-button').
+			addEventListener('click', function () {
+				window.print();
+			});
+	</script>
 </html>
